@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- alt + z = quebra do código quando tá em meia tela-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/coin.png" type="image/x-icon">
+    <link id="file-mode" rel="stylesheet" href="light-mode.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Maby.Finance$</title>
+  </head>
+  <body>
+    <header>
+      <span id="modes">
+        <a href="#" onclick="Mode.light()"><img id="light-mode" src="./assets/sun.svg" alt="Modo Claro"></a>
+        <a href="#" onclick="Mode.dark()"><img id="dark-mode" src="./assets/moon.svg" alt="Modo Escuro"></a>
+      </span>
+      <h1 id="logo" title="Logo Maby Finances">
+        Maby<span style="color: #7ed160">.</span>Finance<span style="color: #7ed160">$</span>
+      </h1>
+    </header>
+
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balanço</h2>
+        <!-- Apenas os screen readers vão poder ver-->
+
+        <div class="card">
+          <h3>
+            <span>Entradas</span>
+            <a href="#" onclick="ListIncome.toggle()"><img src="./assets/income.svg" alt="Ícone de entrada" /></a>
+          </h3>
+          <p id="incomesDisplay">R$ 00,00</p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Saídas</span>
+            <a href="#" onclick="ListExpense.toggle()"><img src="./assets/expense.svg" alt="Ícone de saída" /></a>
+          </h3>
+          <p id="expensesDisplay">R$ 00,00</p>
+        </div>
+
+        <div class="card total" id="card-total">
+          <h3>
+            <span>Total</span>
+            <img src="./assets/total.svg" alt="Ícone de total" />
+          </h3>
+          <p id="totalDisplay">R$ 00,00</p>
+        </div>
+      </section>
+
+      <section id="transactions">
+        <h2 class="sr-only">Transações</h2>
+
+        <a href="#" class="button new" onclick="Modal.toggle()">
+          + Nova Transação
+        </a>
+
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form">
+          <h2>Nova Transação</h2>
+          <form action="" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label for="description" class="sr-only">Descrição</label>
+              <input
+                type="text"
+                name="description"
+                id="description"
+                placeholder="Descrição"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="amount" class="sr-only">Valor</label>
+              <input
+                type="number"
+                name="amount"
+                id="amount"
+                step="0.01"
+                placeholder="Ex.: 100,00"
+              />
+              <small class="help">
+                Use o sinal negativo (-) para despesas e vírgula (,) para casas
+                decimais.
+              </small>
+            </div>
+
+            <div class="input-group">
+              <label for="date" class="sr-only">Data</label>
+              <input type="date" name="date" id="date" />
+            </div>
+
+            <div class="input-group actions">
+              <a href="#" class="button cancel" onclick="Modal.toggle()">
+                Cancelar
+              </a>
+              <button type="submit">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Maby.Finance$ - 2021</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+/*GLOBAL -----------------------------*/
+:root {
+    --color-title: rgb(54, 56, 55);
+    --color-gray: rgb(112, 112, 112);
+    --color-light: rgb(77, 77, 77);
+    --color-red: #E92929;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color:#a0a0a0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .container {
+    margin: auto;
+    width: min(90vw, 800px);
+  }
+  
+  /*TITLES -----------------------------*/
+  h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: normal;
+    color: var(--color-title);
+  }
+  
+  /*LINKS AND BUTTONS -----------------------------*/
+  a {
+    color: var(--color-title);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--color-light);
+  }
+  
+  .button.new {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+  }
+  
+  button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    color: white;
+    background: rgb(18, 164, 84);
+    padding: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  button:hover {
+    background: rgb(18, 164, 84);
+    opacity: 0.8;
+  }
+  
+  .button.cancel {
+  color: var(--color-red);
+  border: 2px var(--color-red) solid;
+  border-radius: 0.5rem;
+  height: 45px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  opacity:0.6;
+  }
+  
+  .button.cancel:hover {
+    opacity:0.9;
+  }
+  
+  #remove-icon {
+    cursor:pointer;
+  }
+  
+  /*HEADER -----------------------------*/
+  header {
+    background: var(--color-title);
+    padding: 2rem 0 7rem;
+    text-align: center;
+  }
+  
+  #logo {
+    color: #fff;
+    font-weight: 200;
+    font-size: 2.5rem;
+  }
+  
+  #dark-mode {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+  }
+  
+  #light-mode {
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+  }
+  
+  #modes {
+    padding: 0 3rem;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 2rem;
+  }
+  
+  /*BALANCE -----------------------------*/
+  #balance {
+    margin-top: -4.55rem;
+  }
+  
+  #balance h2 {
+    color: white;
+    margin-top: 0;
+  }
+  
+  /*CARDS -----------------------------*/
+  .card {
+    background:#929191;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-gray);
+   /*box-shadow: 0.1px 4px 10px var(--color-title);*/
+  }
+  
+  .card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+  }
+  
+  .card p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-top: 0.5rem;
+    color:white;
+  }
+  
+  .card.total {
+    background: rgb(18, 164, 84);
+    color: white;
+  }
+  
+  /*TABLE -----------------------------*/
+  #transactions {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  #data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: var(--color-gray);
+  }
+  
+  table thead tr th:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  
+  table tbody tr td:first-child {
+    border-radius: 0.3rem 0 0 0.3rem;
+  }
+  
+  table thead tr th:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  
+  table tbody tr td:last-child {
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+  
+  table th {
+    background-color: #dbdbdb;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+    color: var(--color-title);
+  }
+  
+  table tbody tr {
+    opacity: 0.7;
+  }
+  
+  table tbody tr:hover {
+    opacity: 1;
+  }
+  
+  table tbody td {
+    background: white;
+    padding: 1rem 2rem;
+    font-weight: normal;
+  }
+  
+  td.description {
+    color: rgb(49, 49, 49);
+  }
+  
+  td.income {
+    color: rgb(18, 164, 84);
+  }
+  
+  .expense {
+    color: var(--color-red);
+  }
+  
+  /*MODAL -----------------------------*/
+  .modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /*alfa é transparência*/
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+    max-width: 90%;
+  }
+  
+  /*FORM -----------------------------*/
+  #form {
+    max-width: 500px;
+  }
+  
+  #form h2 {
+    margin-top: 0;
+  }
+  
+  input {
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    width: 100%;
+  }
+  
+  .input-group {
+    margin-top: 0.8rem;
+  }
+  
+  .help {
+    opacity: 0.4;
+  }
+  
+  .input-group.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .input-group.actions .button,
+  .input-group.actions button {
+    width: 48%;
+  }
+  
+  /*FOOTER -----------------------------*/
+  footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--color-title);
+  }
+  
+  /*RESPONSIVE -----------------------------*/
+  @media (min-width: 800px) {
+    html {
+      font-size: 87.5%; /*15px*/
+    }
+
+    #logo {
+      font-size: 3rem;
+    }
+
+    #modes {
+      padding: 0 3rem;
+    }
+  
+    #balance {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+    }
+  }
