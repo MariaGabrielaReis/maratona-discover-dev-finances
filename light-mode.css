@@ -293,6 +293,17 @@ footer {
   color: var(--color-title);
 }
 
+address p {
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.social img{
+  width: 35px;
+  margin: 0.5rem;
+  opacity: 0.5;
+}
+
 /*RESPONSIVE -----------------------------*/
 @media (min-width: 800px) {
   html {
