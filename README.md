@@ -6,13 +6,34 @@
 
 #### Incrementos
 - Na exibição do Modal foi utilizado o método __.toggle()__
+- Personalização de cores
 - Modo Escuro e Claro (clique nos ícones de lua e sol para alterar)
 - Card de total muda de cor conforme o saldo:
-- - Se o saldo for positivo, permanece verde, já se o saldo for negativo, o fundo do card se torna vermelho sinalizando dívida
+  -  Se o saldo for positivo, permanece verde, já se o saldo for negativo, o fundo do card se torna vermelho sinalizando dívida
 - Adição de ícone no título da página
 - Mudança no título de "dev.finances" para "Maby.finances" (apelido da dev responsável por esse repositório)
+- Adição de informações para contato
 
-#### Incrementos a serem adicionados
-- [ ] Fazer com que não seja preciso colocar o sinal de "-" quando a transação é uma despesa
-- [ ] Implementar filtros de quantia e entradas ou saídas
-- [ ] Pesquisa por nome de transação
+#### Outras ideias de incrementos
+- Fazer com que não seja preciso colocar o sinal de "-" quando a transação é uma despesa
+- Implementar filtros de quantia e entradas ou saídas
+- Pesquisa por nome de transação
+
+## :eyes: Visualização
+#### Página inicial
+![](/prints/dashboard.png)
+
+#### Cadastro de transação
+![](/prints/modal.png)
+
+#### Saldo positivo (Modo Claro)
+![](/prints/positive.png)
+
+#### Saldo positivo (Modo Escuro)
+![](/prints/positive-dark.png)
+
+#### Saldo negativo (Modo Claro)
+![](/prints/negative.png)
+
+#### Saldo negativo (Modo Escuro)
+![](/prints/negative-dark.png)
