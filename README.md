@@ -19,7 +19,7 @@
 - Implementar filtros de quantia e entradas ou saídas
 - Pesquisa por nome de transação
 
-## :eyes: Visualização
+## :eyes: Visualização para web :computer:
 #### Página inicial
 ![](/prints/dashboard.png)
 
@@ -37,3 +37,16 @@
 
 #### Saldo negativo (Modo Escuro)
 ![](/prints/negative-dark.png)
+
+#### Demonstração
+![](/prints/demo-web.gif)
+
+## :eyes: Visualização para dispositivos móveis :iphone:
+#### Página inicial e Cadastro de transação 
+![](/prints/mobile-dashboard.png)  ![](/prints/mobile-modal.png)
+
+#### Saldo positivo (Modo Escuro) e Saldo Negativo (Modo Claro e Escuro)
+![](/prints/mobile-positive-dark.png)  ![](/prints/mobile-negative.png)  ![](/prints/mobile-negative-dark.png)
+
+#### Demonstração
+![](/prints/demo-mobile.gif)
